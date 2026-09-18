@@ -1,0 +1,20 @@
+{"id": "development-001", "category": "password", "text": "password=\"DEV_ONLY_SECRET\"", "expected": [{"start": 10, "end": 25, "category": "password"}], "synthetic": true}
+{"id": "development-002", "category": "email", "text": "Write to dev@example.com.", "expected": [{"start": 9, "end": 24, "category": "email"}], "synthetic": true}
+{"id": "development-003", "category": "card", "text": "4242 4242 4242 4242", "expected": [{"start": 0, "end": 19, "category": "card"}], "synthetic": true}
+{"id": "development-004", "category": "phone", "text": "Call +60 12-345 6789", "expected": [{"start": 5, "end": 20, "category": "phone"}], "synthetic": true}
+{"id": "development-005", "category": "url", "text": "https://dev:DEMO_PASS@example.com", "expected": [{"start": 8, "end": 21, "category": "url"}], "synthetic": true}
+{"id": "development-006", "category": "cookie", "text": "Cookie: session=DEMO_TOKEN; theme=dark", "expected": [{"start": 8, "end": 38, "category": "cookie"}], "synthetic": true}
+{"id": "development-007", "category": "otp", "text": "OTP: 123456", "expected": [{"start": 5, "end": 11, "category": "otp"}], "synthetic": true}
+{"id": "development-008", "category": "personal", "text": "DOB: 2000-01-01", "expected": [{"start": 5, "end": 15, "category": "personal"}], "synthetic": true}
+{"id": "development-009", "category": "ip", "text": "Internal server 192.168.1.10", "expected": [{"start": 16, "end": 28, "category": "ip"}], "synthetic": true}
+{"id": "development-010", "category": "none", "text": "Meet at the library tomorrow.", "expected": [], "synthetic": true}
+{"id": "development-011", "category": "none", "text": "Order number: ORD-2026-1042", "expected": [], "synthetic": true}
+{"id": "development-012", "category": "none", "text": "Basic knowledge matters.", "expected": [], "synthetic": true}
+{"id": "development-013", "category": "key", "text": "api_key=DEV_ONLY_KEY", "expected": [{"start": 8, "end": 20, "category": "key"}], "synthetic": true}
+{"id": "development-014", "category": "overlap", "text": "password=\"Bearer DEV_TOKEN with tail\"", "expected": [{"start": 10, "end": 36, "category": "overlap"}], "synthetic": true}
+{"id": "development-015", "category": "unicode", "text": "password=“ＤＥＶ＿ＳＥＣＲＥＴ”", "expected": [{"start": 10, "end": 20, "category": "unicode"}], "synthetic": true}
+{"id": "development-016", "category": "query", "text": "https://example.com?token=DEMO_TOKEN&page=2", "expected": [{"start": 26, "end": 36, "category": "query"}], "synthetic": true}
+{"id": "development-017", "category": "none", "text": "const token_count = 4;", "expected": [], "synthetic": true}
+{"id": "development-018", "category": "none", "text": "Version 1.2.3", "expected": [], "synthetic": true}
+{"id": "development-019", "category": "none", "text": "const password = \"\";", "expected": [], "synthetic": true}
+{"id": "development-020", "category": "none", "text": "The password policy requires twelve characters.", "expected": [], "synthetic": true}

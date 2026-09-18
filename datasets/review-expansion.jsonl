@@ -1,0 +1,30 @@
+{"id": "review-2026-001", "category": "arduino", "text": "const char* wifi_password = \"FICTIONAL_WIFI_123\";", "expected": [{"start": 29, "end": 47, "category": "arduino"}], "synthetic": true}
+{"id": "review-2026-002", "category": "arduino", "text": "#define MQTT_PASSWORD \"FICTIONAL_MQTT_456\"", "expected": [{"start": 23, "end": 41, "category": "arduino"}], "synthetic": true}
+{"id": "review-2026-003", "category": "arduino", "text": "String api_key = \"DEMO_SENSOR_KEY_789\";", "expected": [{"start": 18, "end": 37, "category": "arduino"}], "synthetic": true}
+{"id": "review-2026-004", "category": "arduino", "text": "const char* DB_PASSWORD = \"FICTIONAL_DB_ABC\";\r\nvoid setup() {}", "expected": [{"start": 27, "end": 43, "category": "arduino"}], "synthetic": true}
+{"id": "review-2026-005", "category": "arduino", "text": "WiFi.begin(\"DEMO_NETWORK\", \"FICTIONAL_INLINE_WIFI\");", "expected": [{"start": 28, "end": 49, "category": "arduino"}], "synthetic": true}
+{"id": "review-2026-006", "category": "arduino-negative", "text": "const int sensorPin = 4;\nunsigned long interval = 5000;", "expected": [], "synthetic": true}
+{"id": "review-2026-007", "category": "arduino-negative", "text": "Serial.println(\"temperature: 25.0 C\");", "expected": [], "synthetic": true}
+{"id": "review-2026-008", "category": "arduino-negative", "text": "const char* password = \"\";", "expected": [], "synthetic": true}
+{"id": "review-2026-009", "category": "arduino-placeholder", "text": "const char* password = \"YOUR_PASSWORD_HERE\";", "expected": [], "synthetic": true}
+{"id": "review-2026-010", "category": "arduino", "text": "const char* password = \"not\\\"aRealSecret\";", "expected": [{"start": 24, "end": 40, "category": "arduino"}], "synthetic": true}
+{"id": "review-2026-011", "category": "document", "text": "[PDF page 1]\npassword: DEMO_DOCUMENT_PASS", "expected": [{"start": 23, "end": 41, "category": "document"}], "synthetic": true}
+{"id": "review-2026-012", "category": "document", "text": "[PDF page 2]\nEmail: fictional.person@example.com", "expected": [{"start": 20, "end": 48, "category": "document"}], "synthetic": true}
+{"id": "review-2026-013", "category": "document", "text": "API_KEY\t=\t\"FICTIONAL_TABLE_KEY\"", "expected": [{"start": 11, "end": 30, "category": "document"}], "synthetic": true}
+{"id": "review-2026-014", "category": "document", "text": "Contact\tfictional.person@example.com\nDepartment\tTesting", "expected": [{"start": 8, "end": 36, "category": "document"}], "synthetic": true}
+{"id": "review-2026-015", "category": "document", "text": "password=“FAKE_CURLY_PASS”", "expected": [{"start": 10, "end": 25, "category": "document"}], "synthetic": true}
+{"id": "review-2026-016", "category": "document", "text": "🔒 Credentials\npassword = UNICODE_TEST_PASS", "expected": [{"start": 26, "end": 43, "category": "document"}], "synthetic": true}
+{"id": "review-2026-017", "category": "document", "text": "Password: FICTIONAL\n\nNotes for review", "expected": [{"start": 10, "end": 19, "category": "document"}], "synthetic": true}
+{"id": "review-2026-018", "category": "document-negative", "text": "[PDF page 1]\nMeeting minutes\nReview the sensor readings next week.", "expected": [], "synthetic": true}
+{"id": "review-2026-019", "category": "document-negative", "text": "Invoice reference: DEMO-2026-0042\nTotal: RM 50.00", "expected": [], "synthetic": true}
+{"id": "review-2026-020", "category": "document-negative", "text": "Version 0.7.0\nPages 1–5\nChapter 3: Methodology", "expected": [], "synthetic": true}
+{"id": "review-2026-021", "category": "document-unsupported", "text": "Our shared pass phrase is fictional maple yellow cloud.", "expected": [{"start": 26, "end": 54, "category": "document-unsupported"}], "synthetic": true}
+{"id": "review-2026-022", "category": "document-unsupported", "text": "Reach me: someone AT example DOT com", "expected": [{"start": 10, "end": 36, "category": "document-unsupported"}], "synthetic": true}
+{"id": "review-2026-023", "category": "document-public-contact", "text": "Public demo support: help@example.com", "expected": [], "synthetic": true}
+{"id": "review-2026-024", "category": "configuration", "text": "postgres://demo_user:DEMO_DB_PASS@localhost/test", "expected": [{"start": 11, "end": 33, "category": "configuration"}], "synthetic": true}
+{"id": "review-2026-025", "category": "configuration", "text": "Authorization: Bearer DEMO_BEARER_TOKEN_ONLY", "expected": [{"start": 22, "end": 44, "category": "configuration"}], "synthetic": true}
+{"id": "review-2026-026", "category": "configuration", "text": "api_key=FAKE_KEY_ONE\npassword=FAKE_PASS_TWO", "expected": [{"start": 8, "end": 20, "category": "configuration"}, {"start": 30, "end": 43, "category": "configuration"}], "synthetic": true}
+{"id": "review-2026-027", "category": "configuration-negative", "text": "api_key = process.env.API_KEY;", "expected": [], "synthetic": true}
+{"id": "review-2026-028", "category": "configuration", "text": "token=\"FAKE_TOKEN_WITH_UNICODE_é\"", "expected": [{"start": 7, "end": 32, "category": "configuration"}], "synthetic": true}
+{"id": "review-2026-029", "category": "configuration-negative", "text": "// Set a password before deploying.\nvoid loop() {}", "expected": [], "synthetic": true}
+{"id": "review-2026-030", "category": "document-boundary", "text": "password=DEMO_DOC_PASS; Contact: team@example.com", "expected": [{"start": 9, "end": 22, "category": "document-boundary"}, {"start": 33, "end": 49, "category": "document-boundary"}], "synthetic": true}

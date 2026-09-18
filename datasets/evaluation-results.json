@@ -1,0 +1,420 @@
+{
+  "dataset": "Manually labelled synthetic evaluation v2: baseline plus Arduino/document review",
+  "examples": 80,
+  "profiles": {
+    "strict": {
+      "tp": 53,
+      "fp": 6,
+      "fn": 8,
+      "precision": 0.8983050847457628,
+      "recall": 0.8688524590163934,
+      "exactRedaction": 0.825,
+      "exactExamples": 66,
+      "failed": 0,
+      "errors": [
+        {
+          "id": "evaluation-035",
+          "category": "unlabelled-secret",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              26,
+              52
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-036",
+          "category": "unlabelled-personal",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              19,
+              37
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-037",
+          "category": "encoded",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              45,
+              77
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-038",
+          "category": "email-obfuscated",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              8,
+              35
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-048",
+          "category": "public-placeholder",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              25,
+              38
+            ]
+          ]
+        },
+        {
+          "id": "evaluation-049",
+          "category": "public-placeholder",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              29,
+              39
+            ]
+          ]
+        },
+        {
+          "id": "evaluation-050",
+          "category": "public-contact",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              24,
+              40
+            ]
+          ]
+        },
+        {
+          "id": "review-2026-002",
+          "category": "arduino",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              23,
+              41
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-005",
+          "category": "arduino",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              28,
+              49
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-009",
+          "category": "arduino-placeholder",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              24,
+              42
+            ]
+          ]
+        },
+        {
+          "id": "review-2026-021",
+          "category": "document-unsupported",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              26,
+              54
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-022",
+          "category": "document-unsupported",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              10,
+              36
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-023",
+          "category": "document-public-contact",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              21,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "review-2026-027",
+          "category": "configuration-negative",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              10,
+              29
+            ]
+          ]
+        }
+      ]
+    },
+    "balanced": {
+      "tp": 51,
+      "fp": 6,
+      "fn": 10,
+      "precision": 0.8947368421052632,
+      "recall": 0.8360655737704918,
+      "exactRedaction": 0.8,
+      "exactExamples": 64,
+      "failed": 0,
+      "errors": [
+        {
+          "id": "evaluation-017",
+          "category": "email-obfuscated",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              0,
+              31
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-028",
+          "category": "ip",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              16,
+              27
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-035",
+          "category": "unlabelled-secret",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              26,
+              52
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-036",
+          "category": "unlabelled-personal",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              19,
+              37
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-037",
+          "category": "encoded",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              45,
+              77
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-038",
+          "category": "email-obfuscated",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              8,
+              35
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "evaluation-048",
+          "category": "public-placeholder",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              25,
+              38
+            ]
+          ]
+        },
+        {
+          "id": "evaluation-049",
+          "category": "public-placeholder",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              29,
+              39
+            ]
+          ]
+        },
+        {
+          "id": "evaluation-050",
+          "category": "public-contact",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              24,
+              40
+            ]
+          ]
+        },
+        {
+          "id": "review-2026-002",
+          "category": "arduino",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              23,
+              41
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-005",
+          "category": "arduino",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              28,
+              49
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-009",
+          "category": "arduino-placeholder",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              24,
+              42
+            ]
+          ]
+        },
+        {
+          "id": "review-2026-021",
+          "category": "document-unsupported",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              26,
+              54
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-022",
+          "category": "document-unsupported",
+          "extra": 0,
+          "miss": 1,
+          "expected": [
+            [
+              10,
+              36
+            ]
+          ],
+          "actual": []
+        },
+        {
+          "id": "review-2026-023",
+          "category": "document-public-contact",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              21,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "review-2026-027",
+          "category": "configuration-negative",
+          "extra": 1,
+          "miss": 0,
+          "expected": [],
+          "actual": [
+            [
+              10,
+              29
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

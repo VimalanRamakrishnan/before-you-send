@@ -1,0 +1,50 @@
+{"id": "evaluation-001", "category": "password", "text": "DB_PASSWORD=\"EVAL_ONLY_PASS\";", "expected": [{"start": 13, "end": 27, "category": "password"}], "synthetic": true}
+{"id": "evaluation-002", "category": "password", "text": "passphrase: 'fictional phrase for testing'", "expected": [{"start": 13, "end": 41, "category": "password"}], "synthetic": true}
+{"id": "evaluation-003", "category": "password", "text": "password=x", "expected": [{"start": 9, "end": 10, "category": "password"}], "synthetic": true}
+{"id": "evaluation-004", "category": "key", "text": "CLIENT_SECRET=EVAL_CLIENT_SECRET", "expected": [{"start": 14, "end": 32, "category": "key"}], "synthetic": true}
+{"id": "evaluation-005", "category": "key", "text": "API_KEY=\"EVAL_DEMO_KEY\"", "expected": [{"start": 9, "end": 22, "category": "key"}], "synthetic": true}
+{"id": "evaluation-006", "category": "token", "text": "Authorization: Bearer EVAL_TOKEN_NOT_LIVE", "expected": [{"start": 22, "end": 41, "category": "token"}], "synthetic": true}
+{"id": "evaluation-007", "category": "token", "text": "Authorization: Basic ZXZhbDpkZW1v", "expected": [{"start": 21, "end": 33, "category": "token"}], "synthetic": true}
+{"id": "evaluation-008", "category": "cookie", "text": "Cookie: session=EVAL_SESSION; preference=light", "expected": [{"start": 8, "end": 46, "category": "cookie"}], "synthetic": true}
+{"id": "evaluation-009", "category": "url", "text": "postgres://reviewer:EVAL_PASSWORD@db.example/eval", "expected": [{"start": 11, "end": 33, "category": "url"}], "synthetic": true}
+{"id": "evaluation-010", "category": "url", "text": "https://reviewer:p%40ssword@example.org/", "expected": [{"start": 8, "end": 27, "category": "url"}], "synthetic": true}
+{"id": "evaluation-011", "category": "query", "text": "https://example.org?access_token=EVAL%2FTOKEN&page=2", "expected": [{"start": 33, "end": 45, "category": "query"}], "synthetic": true}
+{"id": "evaluation-012", "category": "query", "text": "https://example.org?%74oken=EVAL_ONLY&page=2", "expected": [{"start": 28, "end": 37, "category": "query"}], "synthetic": true}
+{"id": "evaluation-013", "category": "otp", "text": "Verification code: 654321", "expected": [{"start": 19, "end": 25, "category": "otp"}], "synthetic": true}
+{"id": "evaluation-014", "category": "otp", "text": "PIN=4321", "expected": [{"start": 4, "end": 8, "category": "otp"}], "synthetic": true}
+{"id": "evaluation-015", "category": "email", "text": "Please ask reviewer@example.org.", "expected": [{"start": 11, "end": 31, "category": "email"}], "synthetic": true}
+{"id": "evaluation-016", "category": "email", "text": "first.last+review@example.net", "expected": [{"start": 0, "end": 29, "category": "email"}], "synthetic": true}
+{"id": "evaluation-017", "category": "email-obfuscated", "text": "reviewer [at] example [dot] org", "expected": [{"start": 0, "end": 31, "category": "email-obfuscated"}], "synthetic": true}
+{"id": "evaluation-018", "category": "phone", "text": "Mobile: 011-23456789", "expected": [{"start": 8, "end": 20, "category": "phone"}], "synthetic": true}
+{"id": "evaluation-019", "category": "phone", "text": "Reach me at +44 7700 900123", "expected": [{"start": 12, "end": 27, "category": "phone"}], "synthetic": true}
+{"id": "evaluation-020", "category": "card", "text": "Sample card 4111 1111 1111 1111", "expected": [{"start": 12, "end": 31, "category": "card"}], "synthetic": true}
+{"id": "evaluation-021", "category": "iban", "text": "GB82 WEST 1234 5698 7654 32", "expected": [{"start": 0, "end": 27, "category": "iban"}], "synthetic": true}
+{"id": "evaluation-022", "category": "personal", "text": "Home address: 456 Fictional Avenue", "expected": [{"start": 14, "end": 34, "category": "personal"}], "synthetic": true}
+{"id": "evaluation-023", "category": "personal", "text": "passport_number=FAKE123456", "expected": [{"start": 16, "end": 26, "category": "personal"}], "synthetic": true}
+{"id": "evaluation-024", "category": "personal", "text": "Full name: Fictional Example Person", "expected": [{"start": 11, "end": 35, "category": "personal"}], "synthetic": true}
+{"id": "evaluation-025", "category": "personal", "text": "DOB: 1999-12-31", "expected": [{"start": 5, "end": 15, "category": "personal"}], "synthetic": true}
+{"id": "evaluation-026", "category": "personal", "text": "Bank_account_number: 12345678", "expected": [{"start": 21, "end": 29, "category": "personal"}], "synthetic": true}
+{"id": "evaluation-027", "category": "id", "text": "010203-01-0000", "expected": [{"start": 0, "end": 14, "category": "id"}], "synthetic": true}
+{"id": "evaluation-028", "category": "ip", "text": "Private address 10.20.30.40", "expected": [{"start": 16, "end": 27, "category": "ip"}], "synthetic": true}
+{"id": "evaluation-029", "category": "unicode", "text": "pass​word=“ＥＶＡＬ＿ＳＥＣＲＥＴ”", "expected": [{"start": 11, "end": 22, "category": "unicode"}], "synthetic": true}
+{"id": "evaluation-030", "category": "multiline", "text": "password=\"line one\nline two\"", "expected": [{"start": 10, "end": 27, "category": "multiline"}], "synthetic": true}
+{"id": "evaluation-031", "category": "escaped", "text": "password=\"EVAL\\\"SECRET\"", "expected": [{"start": 10, "end": 22, "category": "escaped"}], "synthetic": true}
+{"id": "evaluation-032", "category": "overlap", "text": "password=\"Bearer EVAL_TOKEN and remainder\"", "expected": [{"start": 10, "end": 41, "category": "overlap"}], "synthetic": true}
+{"id": "evaluation-033", "category": "private-key", "text": "-----BEGIN PRIVATE KEY-----\nEVAL_ONLY_NOT_A_KEY\n-----END PRIVATE KEY-----", "expected": [{"start": 0, "end": 73, "category": "private-key"}], "synthetic": true}
+{"id": "evaluation-034", "category": "multiple", "text": "password=EVAL_SECRET; contact reviewer@example.org", "expected": [{"start": 9, "end": 20, "category": "multiple"}, {"start": 30, "end": 50, "category": "multiple"}], "synthetic": true}
+{"id": "evaluation-035", "category": "unlabelled-secret", "text": "The Wi-Fi phrase I use is fictional blue river seven.", "expected": [{"start": 26, "end": 52, "category": "unlabelled-secret"}], "synthetic": true}
+{"id": "evaluation-036", "category": "unlabelled-personal", "text": "Send the parcel to 789 Imaginary Lane.", "expected": [{"start": 19, "end": 37, "category": "unlabelled-personal"}], "synthetic": true}
+{"id": "evaluation-037", "category": "encoded", "text": "Encoded credential, with no supported label: ZXZhbHVhdGlvbl9vbmx5X3NlY3JldA==", "expected": [{"start": 45, "end": 77, "category": "encoded"}], "synthetic": true}
+{"id": "evaluation-038", "category": "email-obfuscated", "text": "Contact reviewer AT example DOT org", "expected": [{"start": 8, "end": 35, "category": "email-obfuscated"}], "synthetic": true}
+{"id": "evaluation-039", "category": "none", "text": "Please review the report tomorrow.", "expected": [], "synthetic": true}
+{"id": "evaluation-040", "category": "none", "text": "Order: ORD-2026-7890", "expected": [], "synthetic": true}
+{"id": "evaluation-041", "category": "none", "text": "Basic knowledge is useful.", "expected": [], "synthetic": true}
+{"id": "evaluation-042", "category": "none", "text": "const token_count = 9;", "expected": [], "synthetic": true}
+{"id": "evaluation-043", "category": "none", "text": "const password = \"\";", "expected": [], "synthetic": true}
+{"id": "evaluation-044", "category": "none", "text": "-----BEGIN PUBLIC KEY-----\nFAKE_PUBLIC_MATERIAL\n-----END PUBLIC KEY-----", "expected": [], "synthetic": true}
+{"id": "evaluation-045", "category": "none", "text": "Version 3.4.5", "expected": [], "synthetic": true}
+{"id": "evaluation-046", "category": "none", "text": "Total: RM 180.00; quantity: 3", "expected": [], "synthetic": true}
+{"id": "evaluation-047", "category": "none", "text": "build_id=0123456789abcdef0123456789abcdef", "expected": [], "synthetic": true}
+{"id": "evaluation-048", "category": "public-placeholder", "text": "Template only: password=\"YOUR_PASSWORD\"", "expected": [], "synthetic": true}
+{"id": "evaluation-049", "category": "public-placeholder", "text": "Demo documentation: api_key=\"REPLACE_ME\"", "expected": [], "synthetic": true}
+{"id": "evaluation-050", "category": "public-contact", "text": "Published help address: help@example.org", "expected": [], "synthetic": true}

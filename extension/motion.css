@@ -1,0 +1,32 @@
+/* v0.4.1 — shared interaction polish; motion never changes review state. */
+:root{--action:#3159d7;--action-hover:#2446b6;--ring:#7a9df5}
+button,.workspace-link,.top>a{position:relative;isolation:isolate;overflow:hidden;transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease;color-scheme:light}
+button{min-height:40px;box-shadow:0 1px 2px #162c4510}
+button.primary{background:linear-gradient(135deg,#355fe1,#2749bc);border-color:#3054c7;box-shadow:0 4px 10px #3159d724;color:#fff}
+button.primary:hover:not(:disabled){background:linear-gradient(135deg,#426def,#2a4fc8);box-shadow:0 7px 18px #3159d735}
+button:hover:not(:disabled),.workspace-link:hover,.top>a:hover{border-color:#8ea9d0;box-shadow:0 5px 12px #1b35551a}
+button:active:not(:disabled),.workspace-link:active,.top>a:active{box-shadow:0 1px 3px #162c4520}
+button:disabled{box-shadow:none;opacity:.45;cursor:not-allowed}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+button .click-ripple{position:absolute;pointer-events:none;border-radius:50%;background:currentColor;opacity:.15;z-index:-1}
+button[aria-busy="true"]{cursor:progress!important;opacity:1}
+button[aria-busy="true"]::before{content:"";display:inline-block;vertical-align:-2px;width:12px;height:12px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;margin-right:9px;animation:bys-spin .8s linear infinite}
+button.text-button{min-height:30px;box-shadow:none;padding:4px 6px;border-radius:5px}
+button.text-button:hover:not(:disabled){background:#e9eefb;box-shadow:none}
+input[type="file"]::file-selector-button{font:600 13px system-ui;border:1px solid #b9c9df;border-radius:7px;padding:9px 12px;background:#f6f8fe;color:#2c4fa4;cursor:pointer;transition:background-color .18s,border-color .18s;margin-right:10px}
+input[type="file"]::file-selector-button:hover{background:#e8efff;border-color:#85a2e7}
+select{cursor:pointer;transition:border-color .18s,box-shadow .18s}
+select:hover{border-color:#7998c7;box-shadow:0 2px 8px #213e5d0c}
+summary{padding:5px 0;transition:color .15s}summary:hover{color:#3159d7}
+@keyframes bys-spin{to{transform:rotate(360deg)}}
+@keyframes bys-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bys-scan{from{transform:translateX(-120%)}to{transform:translateX(440%)}}
+@media(prefers-reduced-motion:no-preference){
+ button:hover:not(:disabled),.workspace-link:hover,.top>a:hover{transform:translateY(-1px)}
+ button:active:not(:disabled),.workspace-link:active,.top>a:active{transform:translateY(1px) scale(.985)}
+ #review:not([hidden]),#results:not([hidden]){animation:bys-enter .24s ease-out}
+ .editor:has(#scan[aria-busy="true"])::after{animation:bys-scan 1.4s ease-in-out infinite}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'self'">
+  <title>Before You Send</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="popup.css">
+  <script src="scanner.js" defer></script>
+  <script src="importer.js" defer></script>
+  <script src="review-core.js" defer></script>
+  <script src="examples.js" defer></script><script src="examples-ui.js" defer></script><script src="powerup.js" defer></script><script src="popup.js" defer></script>
+<link rel="stylesheet" href="motion.css"><script src="motion.js" defer></script><link rel="stylesheet" href="playful.css"><link rel="stylesheet" href="powerup.css"></head>
+<body class="popup-page">
+<header><div class="brand"><img src="icons/pixel-shield.svg" width="36" height="36" alt=""><div><strong>Before You Send</strong><span>PRIVATE TEXT REVIEW</span><span class="creator-credit">Created by VimalanRamakrishnan</span></div></div><span class="local">ON-DEVICE</span></header>
+<main>
+  <a class="workspace-link" href="workspace.html" target="_blank" rel="noopener">Open full-page workspace ↗ <span>Custom rules, replacement choices, differences, guided tour and detailed review.</span></a>
+<details class="sample-browser"><summary>Explore 100 fictional examples <span class="sample-arrow" aria-hidden="true">＋</span></summary><section class="example-library" aria-label="Fictional practice examples"><div class="example-library-heading"><strong>Practice with 100 examples</strong><span>Fictional values only</span></div><div class="example-selectors"><label for="example-category">Category<select id="example-category"><option value="all">All categories</option></select></label><label for="example-choice">Example<select id="example-choice" aria-describedby="example-note"></select></label><button id="sample" type="button">Load example</button></div><p id="example-note"></p><small>Loading replaces the current source and clears its review decisions. Choose an example, load it, then click Check text.</small></section></details>
+  <section class="input-section" aria-labelledby="input-title">
+    <div class="section-heading"><h1 id="input-title">A second look before you send.</h1><button id="capture" class="text-button" type="button">Use selected text ↙</button></div>
+    <p class="intro">Catch possible credentials and personal details before they leave your hands.</p><div class="profile-row"><label for="profile">Detection profile</label><select id="profile"><option value="strict">Strict · broader review</option><option value="balanced">Balanced · fewer heuristics</option></select></div><p id="profile-note" class="small">Strict includes opaque strings, IP addresses and selected identity patterns.</p>
+    <div class="file-import"><label for="import-file">Import file</label><input id="import-file" type="file" accept=".ino,.pde,.pdf,.docx,.s,.asm,.bat,.r,.kt,.swift,.vue,.svelte,.txt,.csv,.tsv,.json,.jsonl,.md,.log,.yaml,.yml,.xml,.html,.htm,.css,.js,.mjs,.cjs,.jsx,.ts,.tsx,.py,.java,.c,.h,.cpp,.hpp,.cs,.go,.rs,.rb,.php,.sql,.sh,.ps1,.ini,.conf,.config,.toml,.properties,.env" aria-describedby="import-help"><p id="import-help" class="small">Code/text: 200 KB. PDF/DOCX: 5 MB. Up to 50,000 extracted text units. Import replaces the text below. No uploads.</p></div>
+    <label class="sr-only" for="draft">Text to check</label>
+    <textarea id="draft" placeholder="Paste the message, code snippet, or note you want to check…" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+    <div class="input-meta"><span id="count">0 / 50,000 text units</span><div><button id="clear" class="text-button" type="button">Clear</button></div></div>
+    <button id="scan" class="primary" type="button">Check text <span aria-hidden="true">↗</span></button>
+    <p id="status" class="status" role="status">Text is not saved or uploaded. Closing this popup clears it.</p>
+  </section>
+  <p class="document-notice">Document review: PDF/DOCX imports extract readable text, not the full original document. Check extraction against the original. Images, signatures, embedded files, comments, headers and other unextracted content may contain sensitive data. Scanned pages need OCR. Export creates a <strong>text copy</strong>; it does not redact your original PDF or Word file.</p>
+<section id="results" hidden aria-labelledby="result-title">
+    <div class="result-heading"><div><p class="eyebrow">REVIEW</p><h2 id="result-title"></h2></div><span id="risk-count" class="pill"></span></div>
+    <p id="result-summary" class="intro"></p><p id="coverage-note" class="coverage-note"></p><div class="review-toolbar"><span>Redaction selection</span><div><button id="select-all" type="button" class="text-button">Select all</button><button id="select-none" type="button" class="text-button">Clear selection</button></div></div>
+    <details id="highlight-details"><summary>View full code & highlights</summary><pre id="highlighted"></pre></details>
+    <div id="findings"></div>
+    <section id="redaction-section" aria-labelledby="redaction-title" hidden>
+      <div class="section-heading"><h3 id="redaction-title">Redacted copy</h3><span id="selected-count" class="small"></span></div>
+      <p class="intro">Checked findings become [REDACTED]. Your original message stays unchanged.</p>
+      <label class="sr-only" for="redacted">Redacted output</label><textarea id="redacted" readonly spellcheck="false"></textarea>
+      <button id="copy" class="secondary" type="button">Copy redacted text</button>
+      <p id="copy-status" role="status" class="small"></p>
+    </section>
+  </section>
+  <details class="about"><summary>What this check covers</summary><p>Passwords, selected API-key formats, private keys, authentication headers, session cookies, URL credentials and sensitive URL parameters. Also checks contact details, labelled personal information, card-like numbers and IBAN checksums. Strict adds opaque-string, IP-address, obfuscated-email and selected identity-number heuristics.</p><p>Pattern checks can miss sensitive details and flag harmless text. No findings does not mean a message is safe. No validity checks are sent to providers. Names, addresses, identifiers and encoded secrets are not universally recognised. Only text and code files explicitly imported here are read. PDF and DOCX imports review extracted text only, not images, attachments or all hidden content; it does not block Send buttons.</p><p>Checks run inside this window. No server, analytics, saved history, or automatic clipboard reading. Copying puts the redacted text on your system clipboard, where other software may access it.</p></details>
+</main>
+<footer><span class="creator-credit">Created by VimalanRamakrishnan</span><span>Pause. Review. Share with care.</span><span>v0.11.0</span></footer>
+<aside id="powerup-scene" class="powerup-toast" hidden role="status" aria-live="polite"><div class="powerup-stage" aria-hidden="true"><div class="powerup-ground"></div><div class="powerup-runner"><img class="powerup-base" src="icons/powerup-runner.svg" alt=""><img class="powerup-fire" src="icons/powerup-runner-fire.svg" alt=""></div><img class="powerup-flower" src="icons/powerup-flower.svg" alt=""><span class="powerup-burst"></span><span class="powerup-shot"></span><span class="powerup-spark spark-one"></span><span class="powerup-spark spark-two"></span><span class="powerup-badge">POWER UP!</span></div><p id="powerup-caption"></p><small>Check complete does not mean safe to share.</small></aside></body></html>
